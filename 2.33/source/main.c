@@ -6,7 +6,7 @@ float cost;
 float distance;
 float fee;
 float tolls;
-
+float totalcost;
 int main()
 {
 	printf("Please enter your total miles driven per day\n");
@@ -19,8 +19,7 @@ int main()
 	scanf("%f", &fee);
 	printf("Please enter your tolls per day\n");
 	scanf("%f", &tolls);
-	double a = (miles / distance)*cost;
-	double totalcost = a + fee + tolls;
-	printf("your total cost per day of driving to work is %lf\n", totalcost);
+	totalcost = (miles / distance)*cost + fee + tolls;
+	printf("your total cost per day of driving to work is %f\n", totalcost);
 	system("Pause");
 }
